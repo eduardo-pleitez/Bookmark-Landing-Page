@@ -1,0 +1,418 @@
+$primarytextcolor: hsl(229, 31%, 21%);
+$secondarytextcolor: hsl(229, 8%, 60%); 
+$tertiarytextcolor: white;
+$primarytextsize: 36px;
+$secondarytextsize: 18px;
+$tertiarytextsize: 14px;
+$primarycolor: hsl(231, 69%, 60%);
+$secondarycolor: white;
+$tertiarycolor: hsl(0, 94%, 66%); 
+$quaternarycolor: hsl(229, 31%, 21%);
+$primaryfontweight: 700;
+
+
+@mixin paragraphstyle{
+  color: $secondarytextcolor;
+  font-size: $secondarytextsize;
+  font-weight: $primaryfontweight;
+}
+@mixin bluebtn{
+  background-color: $primarycolor;
+  font-size: $tertiarytextsize;
+  border-radius: 4px;
+  font-weight: $primaryfontweight;
+  padding: 0.9rem 1.6rem;
+  color: $tertiarytextcolor;
+  cursor: pointer;
+}
+
+.topBar{
+  display: flex;
+  overflow: hidden;
+  margin: 1.5rem 3rem;
+}
+.topBarLeft{
+  flex: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 5.5rem;
+}
+.topBarRight{
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a{
+    margin-right: 3rem;
+    color: $secondarytextcolor;
+    font-weight: bold;
+    font-size: $tertiarytextsize;
+    cursor: pointer;
+  }
+  a:hover{
+    color: $tertiarycolor;
+  }
+  .loginButton{
+    padding: 0.8rem 2.3rem;
+    color: $secondarycolor;
+    background-color: $tertiarycolor;
+    border-radius: 5px;
+  }
+  .loginButton:hover{
+    color: $tertiarycolor;
+    background-color: $secondarycolor;
+    border: 2px solid $tertiarycolor;
+  }
+}
+
+.mainSection{
+  display: flex;
+  margin: 8rem 0 3rem 0;
+}
+.mainSectionLeft{
+  flex: 45%;
+  margin-left: 5rem;
+  padding: 3rem 3rem;
+  h1{
+    font-size: 48px;
+    font-weight: $primaryfontweight;
+  }
+  p{
+    @include paragraphstyle;
+    margin: 2.5rem 0;
+  }
+  a{
+    color: $secondarytextcolor;
+    @include bluebtn;
+    margin-right: 1rem;
+  }
+  a:hover{
+    background-color: $secondarycolor;
+    color: $primarycolor;
+    border: 2px solid $primarycolor;
+  }
+  a:last-child{
+    background-color: #f7f7f7;
+    color: $primarytextcolor;
+  }
+  a:last-child:hover{
+    background-color: $secondarycolor;
+    color: $primarytextcolor;
+    border: 2px solid $primarytextcolor
+  }
+}
+.mainSectionRight{
+  position: relative;
+  padding-right: 3rem;
+  padding-bottom: 3rem;
+}
+
+.mainSectionRight::after{
+  content: "";
+  width: 550px;
+  height:375px;
+  border-radius:50% 0 0 50% ;
+  background-color: $primarycolor;
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  bottom: 0;
+}
+.featuresSection{
+  margin: 3rem 0 4rem 0;
+}
+.featuresmain{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2{
+    color: $primarytextcolor;
+    font-size: $primarytextsize;
+  }
+  p{
+    @include paragraphstyle;
+    width: 40%;
+    text-align: center;
+    margin-top: -0.5rem;
+  }
+}
+.featuresList{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 5rem;
+  margin-top: 1rem;
+}
+.featureTab{
+  display: none;
+  margin: 2rem 0;
+}
+.featureTabActive{
+ display: flex;
+}
+.featureButton{
+  color: $secondarytextcolor;
+  font-weight: $primaryfontweight;
+  border: none;
+  background-color: $secondarycolor;
+  border-bottom: 2px solid $secondarytextcolor;
+  padding: 1.5rem 4.3rem;
+  font-size: $secondarytextsize;
+  cursor: pointer;
+}
+.featureButton:hover{
+  color: $tertiarycolor;
+}
+.featureButtonActive{
+  color: $primarytextcolor;
+  font-weight: $primaryfontweight;
+  border: none;
+  background-color: $secondarycolor;
+  border-bottom: 4px solid $tertiarycolor;
+  padding: 1.5rem 4.3rem;
+  font-size: $secondarytextsize;
+  cursor: pointer;
+}
+.featureTabLeft{
+  position: relative;
+  padding-left: 8rem;
+  padding-bottom: 4rem;
+}
+.featureTabLeft::after{
+  content: "";
+  width: 625px;
+  height:325px;
+  border-radius:0 50% 50% 0;
+  background-color: $primarycolor;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+}
+.featureTabRight{
+  flex: 45%;
+  margin-top: 3rem;
+  margin-left: 9rem;
+  margin-right: 8.1rem;
+  h2{
+    color: $primarytextcolor;
+    font-size: $primarytextsize;
+  }
+  p{
+    @include paragraphstyle;
+    margin-top: -0.5rem;
+  }
+  button{
+    color: $secondarytextcolor;
+    @include bluebtn;
+    margin-top: 1rem;
+  }
+  button:hover{
+    background-color: $secondarycolor;
+    color: $primarycolor;
+    border: 2px solid $primarycolor;
+  }
+}
+
+.browsersmain{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  h2{
+    color: $primarytextcolor;
+    font-size: $primarytextsize;
+  }
+  p{
+    @include paragraphstyle;
+    width: 42%;
+    text-align: center;
+    margin-top: -0.5rem;
+  }
+}
+.browserTabSection{
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.browserTab{
+  text-align: center;
+  margin-right: 2rem;
+  padding: 2rem 0.5rem;
+  border-radius: 7px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+#browserTab1{
+  margin-bottom: 4rem;
+}
+#browserTab2{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+#browserTab3{
+  margin-top: 4rem;
+}
+.browserTabButton{
+  @include bluebtn;
+  display: block;
+  margin: 1rem;
+}
+.browserTabButton:hover{
+  background-color: $secondarycolor;
+  color: $primarycolor;
+  border: 2px solid $primarycolor;
+}
+
+.questionsSection{
+  margin: 7rem 0;
+}
+.questionsMain{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  h2{
+    color: $primarytextcolor;
+    font-size: $primarytextsize;
+  }
+  p{
+    @include paragraphstyle;
+    width: 40%;
+    text-align: center;
+    margin-top: -0.5rem;
+  }
+}
+.accordion{
+  display: flex;
+  flex-direction: column;
+}
+.accordionItem{
+  width: 40%;
+  align-self: center;
+}
+.accordionItem:last-child{
+  border-bottom: 2px solid $secondarytextcolor;
+}
+.accordionTitle{
+  display: flex;
+  justify-content: space-between;
+  background-color: $secondarycolor;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 1rem;
+  color: $primarytextcolor;
+  border-top: 2px solid $secondarytextcolor;
+  cursor: pointer;
+}
+.accordionTitle:hover{
+ color: $tertiarycolor;
+}
+.accordionContent{
+  font-size: $secondarytextsize;
+  font-weight: 600;
+  color: $secondarytextcolor;
+  padding: 1rem 1rem 2rem;
+}
+
+.btnInfoSection{
+  display: flex;
+  justify-content: center;
+  .btninfo{
+    display: block;
+    @include bluebtn;
+    margin: 2rem;
+  }
+  .btninfo:hover{
+    background-color: $secondarycolor;
+    color: $primarycolor;
+    border: 2px solid $primarycolor;
+  }
+}
+.contactSection{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $primarycolor;
+  padding: 5rem;
+  p{
+    font-size: 14px;
+    color: $secondarycolor;
+    font-weight: 500;
+    letter-spacing: 4px;
+  }
+  h2{
+    color: $secondarycolor;
+    font-size: $primarytextsize;
+    width: 42%;
+    text-align: center;
+    margin-top: 0.2rem;
+  }
+  input{
+    padding: 0.6rem 1rem;
+    margin-right: 1.5rem;
+    font-size: 16px;
+    width: 375px;
+    font-weight: 500;
+  }
+  input:focus{
+    border: 2px solid $tertiarycolor;
+  }
+}
+.contactButton{
+  border: none;
+  padding: 0.8rem 1.5rem;
+  color: $tertiarytextcolor;
+  background-color: $tertiarycolor;
+  border-radius: 5px;
+  font-size: $secondarytextsize;
+  cursor: pointer;
+}
+.contactButton:hover{
+  color: $tertiarycolor;
+  background-color: $secondarycolor;
+  border: 2px solid $tertiarycolor;
+}
+.bottomBar{
+  display: flex;
+  overflow: hidden;
+  padding: 2rem 0;
+  background-color: $quaternarycolor;
+}
+.bottomBarLeft{
+  flex: 25%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 3rem;
+}
+.bottomBarCenter{
+  flex: 55%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  a{
+    margin-left: 1rem;
+    margin-right: 2rem;
+    color: $secondarytextcolor;
+    font-weight: $primaryfontweight;
+    font-size: $tertiarycolor;
+    cursor: pointer;
+  }
+  a:hover{
+    color: $tertiarycolor;
+  }
+}
+.bottomBarRight{
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a{
+    margin-right: 2rem;
+    cursor: pointer;
+  }
+}
