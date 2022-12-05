@@ -1,19 +1,8 @@
 # Bookmark Landing Page Demo
+## Description
 
-## Getting Started
+In this project we create a website based on a design provided by FrontEnd Mentor. This project was created using React and its framework Nextjs, the design was implemented using Sass.
+## Learning
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## What I learned
-
-I learned to use some features of this framework (Next.js) and to deploy SSG websites.
+I learned to use Nextjs to create a webpage and to deploy Static Site Generated websites.
 I also practice some React skills using hooks.
-
-This project was useful to practice and to learn something new.
